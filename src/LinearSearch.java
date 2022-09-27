@@ -11,11 +11,9 @@ O(1) -  means just 1 variable/ array is used, so it is O(1) or Constant space co
 */
 
 public class LinearSearch {
-
-
     public static void main(String args[]){
 
-        int target = 3;
+        int target = 31;
         int num[] = {11,2,31,4};
         int result = linearSearch(num,target);
 
