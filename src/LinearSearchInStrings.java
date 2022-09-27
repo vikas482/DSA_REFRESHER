@@ -4,14 +4,31 @@ public class LinearSearchInStrings {
 
         String str = "Vikas";
         char target = 'v';
-        int result = linearSearchInStrings(str.toLowerCase(),target);
+        boolean result = linearSearchInStrings1(str.toLowerCase(),target);
 
-        if(result!=-1){
-            System.out.println("Element found at "+result+" position");
+        if(result== true){
+            System.out.println("Element found ");
         }else{
             System.out.println("Element not found in the string");
         }
     }
+
+    static boolean linearSearchInStrings1(String str, char target){
+
+        if(str.length()<1){
+            return false;
+        }
+
+        for(char ch: str.toCharArray()){
+
+            if(ch==target){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     static int linearSearchInStrings(String str, char target){
 
